@@ -12,3 +12,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-react-bootstrap'
+  gem 'rails-assets-react-router'
+end

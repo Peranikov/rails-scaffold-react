@@ -10,6 +10,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
@@ -89,6 +90,10 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.0)
       sprockets-rails
+    rails-assets-react (0.12.2)
+    rails-assets-react-bootstrap (0.13.2)
+      rails-assets-react (>= 0.12.0)
+    rails-assets-react-router (0.11.6)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.5)
@@ -140,6 +145,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   rails (= 4.2.0)
+  rails-assets-react-bootstrap!
+  rails-assets-react-router!
   react-rails (~> 1.0.0.pre)!
   sdoc (~> 0.4.0)
   spring
