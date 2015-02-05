@@ -17,6 +17,7 @@ var App = React.createClass({
 var routes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute handler={ArticleIndex}/>
+    <Route name="index"  handler={ArticleIndex}/>
     <Route name="new" handler={ArticleNew}/>
   </Route>
 );

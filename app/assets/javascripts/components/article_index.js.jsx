@@ -19,6 +19,7 @@ var ArticleIndex = React.createClass({
     var Link = Router.Link;
     return (
       <div>
+        <h1>Article Lists</h1>
         <div>
           <Table data={this.state.articles} />
         </div>
