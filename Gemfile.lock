@@ -90,10 +90,14 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.0)
       sprockets-rails
-    rails-assets-react (0.12.2)
-    rails-assets-react-bootstrap (0.13.2)
-      rails-assets-react (>= 0.12.0)
+    rails-assets-bootstrap (3.3.2)
+      rails-assets-jquery (>= 1.9.1)
+    rails-assets-jquery (2.1.3)
+    rails-assets-react (0.11.0)
+    rails-assets-react-bootstrap (0.12.0)
     rails-assets-react-router (0.11.6)
+    rails-assets-reactable (0.9.8)
+      rails-assets-react (= 0.11)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.5)
@@ -145,8 +149,11 @@ PLATFORMS
 DEPENDENCIES
   byebug
   rails (= 4.2.0)
+  rails-assets-bootstrap!
+  rails-assets-react!
   rails-assets-react-bootstrap!
   rails-assets-react-router!
+  rails-assets-reactable!
   react-rails (~> 1.0.0.pre)!
   sdoc (~> 0.4.0)
   spring

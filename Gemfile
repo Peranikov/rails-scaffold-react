@@ -14,6 +14,9 @@ group :development, :test do
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-react'
+  gem 'rails-assets-reactable'
   gem 'rails-assets-react-bootstrap'
   gem 'rails-assets-react-router'
 end
