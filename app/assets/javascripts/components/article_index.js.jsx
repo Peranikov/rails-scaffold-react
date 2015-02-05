@@ -1,4 +1,4 @@
-var ArticleTable = React.createClass({
+var ArticleIndex = React.createClass({
   fetchArticles() {
     $.get('/articles.json', (res) => {
       if (this.isMounted()) {
@@ -16,8 +16,16 @@ var ArticleTable = React.createClass({
   },
   render() {
     var Table = Reactable.Table;
+    var Link = Router.Link;
     return (
-      <Table data={this.state.articles} />
+      <div>
+        <div>
+          <Table data={this.state.articles} />
+        </div>
+        <div>
+          <Link to="new">New Article</Link>
+        </div>
+      </div>
     );
   }
 });
