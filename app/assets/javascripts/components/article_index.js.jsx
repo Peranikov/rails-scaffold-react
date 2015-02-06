@@ -39,8 +39,9 @@ var ArticleIndex = React.createClass({
       rows.push(
         <Tr>
           <Td column="Comment">{article.comment}</Td>
+          <Td column="Show"><Link to="show" params={{id: article.id}}>Show</Link></Td>
           <Td column="Edit"><Link to="edit" params={{id: article.id}}>Edit</Link></Td>
-          <Td column="Delete"><span onClick={boundDelete}>Delete</span></Td>
+          <Td column="Delete"><a href="#" onClick={boundDelete}>Delete</a></Td>
         </Tr>
       );
     }.bind(this));

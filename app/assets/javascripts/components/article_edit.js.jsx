@@ -31,8 +31,8 @@ var ArticleEdit = React.createClass({
       url: `/articles/${this.getParams().id}.json`,
       data: {"article[comment]": comment, authenticity_token: AUTH_TOKEN},
       type: "PUT",
-      success: function(res) {
-        this.transitionTo('index');
+      success: function(article) {
+        this.transitionTo('show', params={id: article.id});
       }.bind(this)
     });
 

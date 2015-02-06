@@ -18,6 +18,7 @@ var routes = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute handler={ArticleIndex}/>
     <Route name="index" handler={ArticleIndex} />
+    <Route name="show" path="show/:id"  handler={ArticleShow} />
     <Route name="new" handler={ArticleNew} />
     <Route name="edit" path="edit/:id" handler={ArticleEdit} />
   </Route>

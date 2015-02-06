@@ -16,8 +16,8 @@ var ArticleNew = React.createClass({
       return;
     }
 
-    $.post('/articles.json', {"article[comment]": comment, authenticity_token: AUTH_TOKEN}, function(res) {
-      this.transitionTo('index');
+    $.post('/articles.json', {"article[comment]": comment, authenticity_token: AUTH_TOKEN}, function(article) {
+      this.transitionTo('show', params={id: article.id});
     }.bind(this));
 
     this.refs.comment.getDOMNode().value = '';
