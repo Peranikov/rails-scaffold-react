@@ -9,6 +9,7 @@ gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
 group :production do
   gem 'pg'
   gem 'puma'
+  gem 'rails_12factor'
 end
 
 group :development, :test do
