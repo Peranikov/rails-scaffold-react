@@ -6,6 +6,20 @@ var ArticleIndex = React.createClass({
       }
     });
   },
+  deleteArticle(id) {
+    if (!confirm(`Delete article? id:${id}`)) {
+      return;
+    }
+
+    $.ajax({
+      url: `/articles/${id}`,
+      type: "DELETE",
+      data: {authenticity_token: AUTH_TOKEN},
+      success: function() {
+        this.fetchArticles();
+      }.bind(this)
+    });
+  },
   getInitialState() {
     return {
       articles: []
@@ -21,15 +35,15 @@ var ArticleIndex = React.createClass({
     var Link = Router.Link;
     var rows = [];
     this.state.articles.forEach(function(article) {
-      console.log(article.id)
+      var boundDelete = this.deleteArticle.bind(this, article.id);
       rows.push(
         <Tr>
           <Td column="Comment">{article.comment}</Td>
           <Td column="Edit"><Link to="edit" params={{id: article.id}}>Edit</Link></Td>
-          <Td column="Delete"><Link to="delete">Delete</Link></Td>
+          <Td column="Delete"><span onClick={boundDelete}>Delete</span></Td>
         </Tr>
       );
-    });
+    }.bind(this));
     return (
       <div>
         <h1>Article Lists</h1>

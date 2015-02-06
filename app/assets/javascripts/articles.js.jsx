@@ -20,7 +20,6 @@ var routes = (
     <Route name="index" handler={ArticleIndex} />
     <Route name="new" handler={ArticleNew} />
     <Route name="edit" path="edit/:id" handler={ArticleEdit} />
-    <Route name="delete" />
   </Route>
 );
 
