@@ -5,7 +5,7 @@ var ArticleEdit = React.createClass({
   mixins: [Navigation, State],
 
   fetchArticle(id) {
-    $.get(`/articles/${id}/edit.json`, (res) => {
+    $.get(`/articles/${id}.json`, (res) => {
       if (this.isMounted()) {
         this.setState({article: res});
       }

@@ -16,19 +16,6 @@ class ArticlesController < ApplicationController
     render json: @article
   end
 
-  # GET /articles/new
-  def new
-    @article = Article.new
-  end
-
-  # GET /articles/1/edit
-  def edit
-    respond_to do |format|
-      format.html
-      format.json { render json: @article }
-    end
-  end
-
   # POST /articles
   def create
     @article = Article.new(article_params)
