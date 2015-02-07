@@ -37,7 +37,7 @@ var ArticleIndex = React.createClass({
     this.state.articles.forEach(function(article) {
       var boundDelete = this.deleteArticle.bind(this, article.id);
       rows.push(
-        <Tr>
+        <Tr key={article.id}>
           <Td column="Comment">{article.comment}</Td>
           <Td column="Show"><Link to="show" params={{id: article.id}}>Show</Link></Td>
           <Td column="Edit"><Link to="edit" params={{id: article.id}}>Edit</Link></Td>
