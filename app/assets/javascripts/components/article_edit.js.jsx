@@ -46,6 +46,9 @@ var ArticleEdit = React.createClass({
           <textarea ref="comment" value={this.state.article.comment} onChange={this.handleChange} />
           <input type="submit" value="Post" />
         </form>
+        <div>
+          <Link to="index">Back</Link>
+        </div>
       </div>
     );
   }
